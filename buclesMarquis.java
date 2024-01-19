@@ -1,8 +1,14 @@
-// Criar um objeto da classe Random
-        Random rand = new Random();
+import java.util.Random;
 
-        // Gerar um número aleatório entre 1 e 10
-        int numeroAleatorio = rand.nextInt(10) + 1;
+public class RandomExample {
+    public static void main(String[] args) {
+        // Crear un objeto Random
+        Random random = new Random();
 
-        // Exibir o número aleatório gerado
-        System.out.println("Número aleatório entre 1 e 10: " + numeroAleatorio);
+        // Generar un número aleatorio entre 1 y 10
+        int numeroAleatorio = random.nextInt(10) + 1;
+
+        // Imprimir el número aleatorio
+        System.out.println("Número aleatorio entre 1 y 10: " + numeroAleatorio);
+    }
+}
