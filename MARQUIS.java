@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 public class MARQUIS {
     public static void main(String[] args) {
         
@@ -43,3 +44,10 @@ public class MARQUIS {
     }
 }
 >>>>>>> abaa56c6af1169c886cebfe1671026d1185afd27
+=======
+public class MARQUIS {
+    public static void main(String[] args) {
+        
+    }
+}
+>>>>>>> ad47772e3b0fb34e055da01fc8e158e46af8102e
