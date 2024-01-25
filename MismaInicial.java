@@ -2,38 +2,44 @@ import java.util.Scanner;
 
 public class MismaInicial {
 
-    public static boolean esIgual(String palabra1, String palabra2) {
+    public static boolean sonIguales(String palabra1, String palabra2){
         return palabra1.charAt(0) == palabra2.charAt(0);
-    };
-
+    }
     public static void main(String[] args) {
+        /*
+         * Crea una función a la que le pases dos palabras y compruebe si tienen la
+         * misma inicial.
+         * True si tiene la misma inicial.
+         * False si no tiene la misma inicial.
+         */
 
-        Scanner sc = new Scanner(System.in);
+         Scanner sc=new Scanner (System.in);
 
-        String palabra1 = "", palabra2 = "";
-        boolean esLoMismo;
-        String[] palabrasPrueba = { "patata", "pomelo", "melocoton", "1234" };
+         String pal1 = "", pal2 = "";
 
-        if (args.length == 1 && args[0].equals("probando")) {
+         String[] listaPalabrasPrueba = {"alcachofa", "cocacola", "1234", "caca"};
 
-            palabra1 = palabrasPrueba[0];
+         if(args.length == 1 && args[0].equals("probando")){
 
-            for (int i = 1; i < palabrasPrueba.length; i++) {
-                palabra2 = palabrasPrueba[i];
-                System.out.println(esIgual(palabra1, palabra2));
+            for (String string : listaPalabrasPrueba) {
+                System.out.println(string);
             }
-        } else if (args.length != 2) {
-            System.out.println("Dime una palabra: ");
-            palabra1 = sc.nextLine();
 
-            System.out.println("Dime otra palabra: ");
-            palabra2 = sc.nextLine();
+            pal2 = listaPalabrasPrueba[0];
 
-        } else {
-            palabra1 = args[0];
-            palabra2 = args[1];
-        }
+            for(int i = 0; i < listaPalabrasPrueba.length ; i++){
+                pal1 = listaPalabrasPrueba[i];
+                System.out.println(sonIguales(pal1, pal2));
+            }
 
-        System.out.println(esLoMismo = esIgual(palabra1, palabra2));
+         }else if(args.length != 2){
+            System.out.println("¡¡¡¡¡El numero de argumentos es incorrecto, vuelve a introducirlos!!!!! -> Se esperan dos String's");
+         }else{
+            pal1 = args[0];
+            pal2 = args[1];
+
+            System.out.println(sonIguales(pal1, pal2));
+         }
+
     }
 }

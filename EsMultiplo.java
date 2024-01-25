@@ -4,7 +4,7 @@ import java.util.Random;
 public class EsMultiplo {
 
     public static boolean esMultiplo(int num1, int num2) {
-        return num1 % num2 == 0;
+        return num1 / num2 == 0;
     }
 
     public static void main(String[] args) {
@@ -29,6 +29,12 @@ public class EsMultiplo {
         }
 
         if (args.length == 1 && args[0].equals("probando")) {
+            System.out.println(numAleatorio);
+
+            for (int i : listaNumeros) {
+                System.out.println(i);
+            }
+
             int numero2 = listaNumeros[0];
 
             for (int i = 0; i < listaNumeros.length; i++) {
@@ -47,6 +53,8 @@ public class EsMultiplo {
         } else {
             num1 = Integer.parseInt(args[0]);
             num2 = Integer.parseInt(args[1]);
+            
+            System.out.println(esMultiplo(num1,num2));
         }
 
     }
