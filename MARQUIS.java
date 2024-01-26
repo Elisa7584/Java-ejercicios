@@ -128,6 +128,15 @@ public class ComidaRapida {
         String nombreCliente = scanner.nextLine();
         System.out.println("¡Muchas gracias, " + nombreCliente + "!");
 >>>>>>> 963d0049e7941e6529110e7e8d234d56a8a557b8
+
+        /*
+          [26/1, 8:56] Marcos: por si puedes leer esto
+[26/1, 8:57] Marcos: lo de boolean lechuga sc.nextLine().equalsIgnoreCase()
+[26/1, 8:57] Marcos: es como hacer de toda la vida
+[26/1, 8:57] Marcos: string respuesta = sc.nextLine
+[26/1, 8:57] Marcos: if (respuesta.equals("si")
+         quiereLechuga = true
+        */
     }
                     }
         
