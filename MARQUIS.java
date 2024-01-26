@@ -2,13 +2,14 @@
 // VOY A INTENTAR VER SI PUEDO ASEGURARME QUE ESTÁ TODO BIEN
 // AL MENOS TIENES ESTO POR SI TE AYUDA :)
 
-
+// Y LEE LOS COMENTARIOS POR SI ACASO
         import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ComidaRapida {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+         // Si no te deja usar arraylist, usa un array normal y ya
         ArrayList<String> pedido = new ArrayList<>();
         double precioTotal = 0;
 
@@ -19,6 +20,8 @@ public class ComidaRapida {
 
             if (opcion.equals("hamburguesa")) {
                 // #1 - Preguntar por los extras de la hamburguesa
+
+                   // El 
                 System.out.println("¿Quiere lechuga?");
                 boolean lechuga = scanner.nextLine().equalsIgnoreCase("si");
 
@@ -46,8 +49,10 @@ public class ComidaRapida {
 
                 // Construir el String con la información de la pizza
                 String infoPizza = "Una pizza";
-                if (salsa) infoPizza += " con salsa";
-                if (quesoExtra) infoPizza += " con extra de queso";
+                if (salsa)
+                        infoPizza += " con salsa";
+                if (quesoExtra) 
+                        infoPizza += " con extra de queso";
 
                 pedido.add(infoPizza);
                 precioTotal += 12;
@@ -64,8 +69,10 @@ public class ComidaRapida {
 
                 // Construir el String con la información del helado
                 String infoHelado = "Un helado";
-                if (chispitas) infoHelado += " con chispitas";
-                if (sirope) infoHelado += " con sirope";
+                if (chispitas) 
+                        infoHelado += " con chispitas";
+                if (sirope)
+                        infoHelado += " con sirope";
                 infoHelado += " en " + cucuruchoTarrina;
 
                 pedido.add(infoHelado);
