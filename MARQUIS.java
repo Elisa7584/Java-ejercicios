@@ -13,14 +13,18 @@ public class ComidaRapida {
 =======
         Scanner scanner = new Scanner(System.in);
          // Si no te deja usar arraylist, usa un array normal y ya
+
+            // LEE ESTO, ES LA JUSTIFICACIÓN DE PORQUE USO ARRAYLOST
+            
+        // ARRAYLIST PORQUE QUEREMOS METER DE MANERA DINAMICA ELEMENTOS Y NO SABEMOS CUANTOS QUEREMOS
+            // EL ARRAY NORMAL ES CUANDO SABES EL NUMERO DE COSAS QUE QUIERES GUARDAR, Y AQUÍ NO LO SABEMOS CLARO
         ArrayList<String> pedido = new ArrayList<>();
         double precioTotal = 0;
 
         System.out.println("¿Qué quiere pedir? Hamburguesa, Pizza o Helado.");
 
         while (true) {
-            String opcion = scanner.nextLine().toLowerCase();
-
+            String opcion = scanner.nextLine().toLowerC
             if (opcion.equals("hamburguesa")) {
                 // #1 - Preguntar por los extras de la hamburguesa
 
