@@ -25,7 +25,18 @@ public class ComidaRapida {
             if (opcion.equals("hamburguesa")) {
                 // #1 - Preguntar por los extras de la hamburguesa
 
-                   // El 
+                   // El equals ignore case de seguido es lo mismo que haces siempre 
+                    // para comprobar si un strint es igual a una cosa u otra
+                    // solo que puedes escribiroo así del tirón o hacerlo así:
+
+                    /* 
+                    boolean quiereLechuga = false;
+                    sout("¿quieres lechuga?")
+                    string respuesta = sc.nextLine()
+                    if (respuesta.equals("si") {
+                      quiereLechuga = true;
+                    }
+                    */
                 System.out.println("¿Quiere lechuga?");
                 boolean lechuga = scanner.nextLine().equalsIgnoreCase("si");
 
