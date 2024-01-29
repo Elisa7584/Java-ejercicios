@@ -1,56 +1,43 @@
-import java.util.Scanner;
-
 public class TamaPalabra {
-
-    public static String tamaPalabra(String palabra, int numero) {
-
+    public static String tamaPalabra(int n, String palabra){
         int longitudPalabra = palabra.length();
 
-        if (longitudPalabra < numero) {
-            for (int i = longitudPalabra; i < numero; i++) {
-
+        if (longitudPalabra < n){
+            for (int i = longitudPalabra ; i < n ; i++){
                 palabra += "-";
             }
-        } else if (longitudPalabra > numero) {
-
-            String aux = "";
-
-            for (int i = 0; i < numero; i++) {
-
-                aux += palabra.charAt(i);
+        }else if (longitudPalabra > n){
+            String palabraRecortada = "";
+            for (int i = 0 ; i < n ; i++){
+                palabraRecortada += palabra.charAt(i);
             }
-            palabra = aux;
+            palabra = palabraRecortada;
         }
 
         return palabra;
     }
 
-    public static void main(String[] args) {
-
-        Scanner sc = new Scanner(System.in);
-
+    public static void main(String[] args){
         int numero = 5;
-        String palabra = "", nuevaPalabra = "";
-        String[] listaPalabras = { "patata", "gato", "hipopotamo", "", "eco", "esternocleido" };
-        int[] numerosPrueba = { -2, 3, 5, 10 };
+        String palabra = "";
+        int[] numerosDePrueba = {-2,0,3,5,10};
+        String[] palabrasDePrueba = {"","pan","verde","patata","hipopotamo","esternocleido"};
 
-        if (args.length == 1 && args[0].equals("probando")) {
-
-            for (int numerosDePrueba : numerosPrueba) {
-                System.out.println(tamaPalabra(palabra, numerosDePrueba));
-                
-                for (String palabraPrueba : listaPalabras) {
-                    System.out.println(tamaPalabra(palabraPrueba, numero));
+        if(args.length == 1 && args[0].equals("probando")){
+            for(int numeroPrueba : numerosDePrueba){
+                System.out.println("Para el número: " + numeroPrueba);
+                for(String palabraPrueba : palabrasDePrueba){
+                    System.out.println(tamaPalabra(numeroPrueba,palabraPrueba));
                 }
             }
-        } else if (args.length != 2) {
-
-            System.out.println("El numero de argumentos no es correcto");
-
+        }else if (args.length != 2){
+            System.out.println("--- Número argumentos incorrecto: int - String ---");
         } else {
             numero = Integer.parseInt(args[0]);
             palabra = args[1];
+            System.out.println(tamaPalabra(numero,palabra));
         }
 
+        
     }
 }
