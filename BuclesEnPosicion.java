@@ -24,8 +24,6 @@ public class BuclesEnPosicion {
             int posicion = Integer.parseInt(args[0]);
             resultado = buscaPosicion(posicion, listaNumeros);
 
-            
-
         }
     }
 }

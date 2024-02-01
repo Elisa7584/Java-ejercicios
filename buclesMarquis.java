@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class RandomExample {
+public class buclesMarquis {
     public static void main(String[] args) {
         // Crear un objeto Random
         Random random = new Random();

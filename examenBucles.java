@@ -8,22 +8,11 @@ public class examenBucles {
         Scanner sc=new Scanner (System.in).useLocale(Locale.ENGLISH);
         Random random = new Random();
 
-        String nombreEquipo;
-        int numMiembros;
-
-        if (args.length > 2){
-            System.out.println("Versión del código en desarrollo... ¡Introduzca el nombre del equipo y el número de miembros!");
-        }else{
-            System.out.println("Ha introducido correctamente los datos.");
-            nombreEquipo = args[0];
-            numMiembros = Integer.parseInt(args[1]);
-
         System.out.print("Ingrese el nombre del equipo: ");
-        nombreEquipo = sc.nextLine();
+        String nombreEquipo = sc.nextLine();
 
         System.out.print("Ingrese el número de miembros del equipo: ");
-        numMiembros = sc.nextInt();
-
+        int numMiembros = sc.nextInt();
         sc.nextLine();
 
         String[] nombresMiembros = new String[numMiembros];
@@ -52,7 +41,6 @@ public class examenBucles {
         
         System.out.println("El jefe de equipo es: " + nombresMiembros[indiceJefe] + ".");
 
-}
 }
 }
 
